@@ -1,0 +1,14 @@
+li{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+li:nth-child(3n){
+    color: white;
+}
+li:nth-child(3n+1){
+    color: black;
+}

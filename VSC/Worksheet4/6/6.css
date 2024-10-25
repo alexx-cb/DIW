@@ -1,0 +1,18 @@
+.testimonials__card--content{
+    background-color: green;
+    opacity: 50%;
+    width: 30vw;
+    overflow: visible;
+    padding: 2vw;
+    position: absolute;
+    padding: 4vw;
+    top: 30%;
+    
+}
+.testimonials__card--img{
+    width: 50vw;
+    height: 50vh;
+}
+.testimonials__card--content__title{
+    font-size: 34px;
+}
