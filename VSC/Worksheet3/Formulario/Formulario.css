@@ -1,0 +1,71 @@
+form {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Campos requeridos */
+input[type="text"]:required,
+input[type="email"]:required,
+input[type="password"]:required {
+    border: 2px solid #ccc;
+}
+
+input[type="text"]:required:focus,
+input[type="email"]:required:focus,
+input[type="password"]:required:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background-color: #f0f8ff;
+}
+
+/* Estilos para campos válidos e inválidos */
+input:required:valid {
+    border-color: #4caf50;
+    background-color: #e7f9e9;
+}
+
+input:required:invalid {
+    border-color: #f44336;
+    background-color: #f9e7e7;
+}
+
+/* Estilo para etiquetas de radio y checkbox */
+label[for="cookies"] {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Estilo de campos con foco */
+input:focus {
+    background-color: #f5f5f5;
+    border-color: #6fa3ef;
+}
+
+
+/* Estilos para el botón de enviar */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

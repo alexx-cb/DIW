@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Formulario.css">
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>quien eres</legend>
+    
+            <label for="nombre">Nombre: <span class="asterisk">*</span></label> <br>
+            <input type="text" name="nombre" id="nombre" class="required" required title="Campo requerido" placeholder="Alejandro"> <br>
+            
+            <label for="apellidos">Apellidos: <span class="asterisk">*</span></label> <br>
+            <input type="text" name="apellidos" id="apellidos" class="required" required title="Campo requerido" placeholder="Cabrera"> <br>
+    
+            <label for="correo">Correo electronico <span class="asterisk">*</span></label> <br>
+            <input type="email" name="correo" id="correo" class="required" required title="Campo requerido" placeholder="ejemplo@gmail.com"> <br>
+    
+            <label for="nacimiento">Fecha de nacimiento</label> <br>
+            <input type="date" name="nacimiento" id="nacimiento"> <br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>de donde eres</legend>
+    
+            <label for="ciudad">Ciudad:</label> <br>
+            <input type="text" name="ciudad" id="ciudad"> <br>
+            
+            <label for="postal">Codigo Postal:</label> <br>
+            <input type="number" pattern="[0-9]{5}" maxlength="5" name="postal" id="postal"> <br>
+    
+            <label for="pais">Pais</label> <br>
+            <select name="pais" id="pais">
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+            </select><br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Como quieres iniciar sesion</legend>
+    
+            <label for="usuario">Usuario: <span class="asterisk">*</span></label> <br>
+            <input type="text" name="usuario" id="usuario" class="required" maxlength="15" required title="Campo requerido" placeholder="usuarioEmplo1"> <br>
+            
+            <label for="pass">Contraseña: <span class="asterisk">*</span></label> <br>
+            <input type="password" name="pass" id="pass" class="required" required title="Campo requerido" placeholder="constraseña"> <br>
+    
+            <label for="RepitePass">Repite Contraseña: <span class="asterisk">*</span></label> <br>
+            <input type="password" name="RepitePass" id="RepitePass" class="required" required title="Campo requerido" placeholder="constraseña"> <br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Condiciones de registro</legend>
+    
+            <label for="cookies">Deseo recibir ofertas de mi revista</label><br>
+            <input type="radio" name="cookies" value="dia"> Una vez al dia 
+            <input type="radio" name="cookies" value="semana"> Una vez a la semana 
+            <input type="radio" name="cookies" value="mes"> Una vez al mes
+        </fieldset>
+    
+        <input type="submit" name="registrarse" id="registrarse" value="Crear cuenta">
+    </form>
+
+
+</body>
+</html>
