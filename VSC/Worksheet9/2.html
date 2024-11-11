@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header, .footer {
+      background-color: #9ACD32;
+      color: white;
+      text-align: left;
+      padding: 10px;
+    }
+
+    .nav {
+      background-color: #FFFFE0;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .main {
+      background-color: #FFF;
+      padding: 10px;
+    }
+
+    .aside {
+      background-color: #B0E0E6;
+      padding: 10px;
+      text-align: left;
+    }
+
+    @media (min-width: 769px) {
+      /* Vista Desktop */
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav main aside"
+          "footer footer footer";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .main {
+        grid-area: main;
+      }
+
+      .aside {
+        grid-area: aside;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Vista Tablet */
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "main nav"
+          "footer footer";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .main {
+        grid-area: main;
+      }
+
+      .aside {
+        display: none; /* Esconde el aside en tablet */
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+    }
+
+    @media (max-width: 568px) {
+      /* Vista Móvil */
+      body {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "aside"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .main {
+        grid-area: main;
+      }
+
+      .aside {
+        grid-area: aside;
+        display: block; /* Aside vuelve a mostrarse en vista móvil */
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">Header</header>
+  <nav class="nav">Nav</nav>
+  <main class="main">Article</main>
+  <aside class="aside">Aside</aside>
+  <footer class="footer">Footer</footer>
+</body>
+</html>

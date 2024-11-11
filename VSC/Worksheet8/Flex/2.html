@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .carta{
+        width: 150px;
+        height: 300px;
+        margin: 20px;
+        background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 450px;
+    }
+    .imagen{
+        width: 100%;
+        height: auto;
+    }
+    .imagen img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .cuerpo{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 10px;
+    }
+    .pie{
+        width: 100%;
+        height: 50px;
+        background-color: blueviolet;
+        align-self: flex-end;
+        text-align: center;
+        align-content: center;
+    }
+    
+    
+</style>
+</head>
+<body>
+    
+    <section class="contenedor">
+        <div class="carta">
+
+            <header class="imagen">
+                <img src="alonso.jpg">
+            </header>
+    
+            <div class="cuerpo"> 
+                Lorem ipsum dolor sit amet consectetur adipiscing elit ullamcorper per et, rutrum quis sapien
+            </div>
+            <footer class="pie">Boton</footer>
+        </div>
+        <div class="carta">
+
+            <header class="imagen">
+                <img src="alonso.jpg">
+            </header>
+    
+            <div class="cuerpo"> 
+                Lorem ipsum dolor sit amet consectetur 
+            </div>
+            <footer class="pie">Boton</footer>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+
