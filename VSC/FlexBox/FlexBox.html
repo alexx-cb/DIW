@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Flexbox.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@434&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@434&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <title>Portafolio</title>
+    <script src="https://kit.fontawesome.com/7fe309129d.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburguesa = document.querySelector(".hamburguesa");
+            const menu = document.querySelector(".menu");
+
+            hamburguesa.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+
+            const hexagonos = document.querySelectorAll(".imagenHexagono");
+
+            // Agregamos un event listener a cada uno
+            hexagonos.forEach(hexagono => {
+                hexagono.addEventListener("click", () => {
+                // Alternamos la clase 'active' al hexágono que fue clickeado
+                hexagono.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="noto-sans-mono-title">
+        <div class="logo">PF</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#hero">Sobre mí</a></li>
+            </ul>
+        </nav>
+        <div class="hamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="textoHero">
+            <div class="roboto-text" >
+                <h1>Alejandro Cabrera Barea </h1>
+                <p>Estudiante de desarrollador WEB</p>
+                <p>¡Hola! Soy Alejandro, un desarrollador web especialidado en JavaScript, con muchas ganas de aprender
+                    lenguajes nuevos y nuevas formas de creación de contenido.
+                </p>
+                <a href="https://github.com/alexx-cb" target="_blank" class="btnGithub">GITHUB</a>
+            </div>
+        </div>
+        <div class="imagenPersona">
+            <img src="CV_Foto.jpeg" alt="imagen persona">
+        </div>
+
+    </section>
+
+    <section id="proyectos" class="noto-sans-mono-title">
+        <h2>Mis Proyectos</h2>
+        <div class="hexagonos-contenedor">
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="ATARI_PONG.png" alt="ATARI-PONG">
+                </div>
+                <div class="reverso">
+                    <div class="roboto-text">
+                        <p>Proyecto de JavaScript imitando el famoso juego de ATARI del PONG, 
+                            en este proyecto se juega contra la máquina y cada vez que hay un rebote en uno de los dos rectangulos, 
+                            la velocidad de la bola aumenta.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="PAIRS.png" alt="PAIRS">
+                </div>
+                <div class="reverso"> 
+                    <div class="roboto-text">
+                        <p>Proyecto de JavaScript en el que se trata de adivinar la pareja de cada carta volteada, 
+                            cuando se adivina una carta, se mantiene volteada, si no es así, vuelve a su posicion inical
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="CRONO.png">
+                </div>
+                <div class="reverso">
+                    <div class="roboto-text">
+                        <p>
+                            Proyecto de JavaScript en el que se realiza un cronometro en el cual se puede iniciar, parar y reiniciar el tiempo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="AHORCADO.png" alt="">
+                </div>
+                <div class="reverso">
+                    <div class="roboto-text">
+                        <p>
+                            Proyecto de JavaScript imitando el juego del ahorcado o HangMan, en el cual se adivinan nombres de pilotos de F1
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="RGB.png" alt="">
+                </div>
+                <div class="reverso">
+                    <div class="roboto-text">
+                        <p>
+                            Proyecto de JavaScript en el que se trata de un juego en el que tienes que adivinar el color que se proporciona por RGB, y abajo una serie de 
+                            colores aleatorios y uno que coincide con el expuesto en el titulo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenHexagono">
+                <div class="frente">
+                    <img src="LISTA.png" alt="">
+                </div>
+                <div class="reverso">
+                    <div class="roboto-text">
+                        <p>
+                            Proyecto de JavaScript en el que se insertan cadenas de texto que se pueden editar y borrar, además se guardan en el LocalStorage de la web
+                             por lo que al volver a iniciar la web se mantienen los datos introducidos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <div class="contacto-contenedor">
+
+            <div class="texto-contacto">
+                <div class="roboto-text">
+                    <p>
+                        <b>Correo:</b> alejandrocabrerabarea@gmail.com
+                    </p>
+                    <p>
+                        <b>Telefono:</b> 643146699
+                    </p>
+                    <p>
+                        <b>Direccion:</b> Av/ Ciudad Deportiva 2, Maracena, Portal 4 Bajo
+                    </p>
+                </div>
+                
+            </div>
+            
+
+            <form>
+
+                <label for="nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                </label>
+    
+
+                <label for="apellidos">
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                </label>
+    
+
+                <label for="correo">
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                </label>
+    
+
+                <label for="telefono">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                </label>
+    
+
+                <label for="mensaje">
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+                </label>
+    
+
+                <button type="submit" class="btnEnviar">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer id="redes">
+        <p>Alejandro Cabrera Barea</p>
+        <div class="iconos">
+            <a href="https://www.instagram.com/aalex.cb/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/alexx-cb" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alejandro-cabrera-barea-689910308/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div> 
+    </footer>
+</body>
+</html>

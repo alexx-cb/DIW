@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Layout</title>
+  <title>Document</title>
   <style>
     * {
       margin: 0;
@@ -40,7 +40,6 @@
     }
 
     @media (min-width: 769px) {
-      /* Vista Desktop */
       body {
         display: grid;
         grid-template-areas:
@@ -73,8 +72,25 @@
       }
     }
 
+    @media (max-width: 567px) {
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      header, footer {
+        flex: 0 0 auto;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+      nav, article, aside, footer {
+        max-width: 100%;
+      }
+    }
+/*
     @media (max-width: 768px) {
-      /* Vista Tablet */
+      
       body {
         display: grid;
         grid-template-areas:
@@ -99,7 +115,7 @@
       }
 
       .aside {
-        display: none; /* Esconde el aside en tablet */
+        display: none; 
       }
 
       .footer {
@@ -108,7 +124,7 @@
     }
 
     @media (max-width: 568px) {
-      /* Vista Móvil */
+      /* Vista Móvil 
       body {
         display: grid;
         grid-template-areas:
@@ -135,13 +151,15 @@
 
       .aside {
         grid-area: aside;
-        display: block; /* Aside vuelve a mostrarse en vista móvil */
+        display: block; 
       }
 
       .footer {
         grid-area: footer;
       }
     }
+      */
+    
   </style>
 </head>
 <body>

@@ -1,0 +1,558 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+/*Seccion por defecto*/
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Web Fonts Titulo*/
+.noto-sans-mono-title {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto; /* Mejora la apariencia del texto */
+    font-weight: 434; /* Peso especificado en Google Fonts */
+    font-style: normal; /* Sin cursiva */
+    font-variation-settings: "wdth" 100; /* Ajusta la anchura de los caracteres */
+}
+
+/* Web Fonts Texto*/
+.roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; /* Normal */
+    font-style: normal; /* Sin cursiva */
+}
+
+/* Seccion de Navegacion*/
+/* Barra de menú*/
+header {
+    background:#111810;
+    padding: 1rem;
+    position: sticky;/* Se mantenga siempre en pantalla*/
+    top: 0;
+    z-index: 10;
+    width: 100%; /* Header ocupa todo el ancho */
+    display: flex; /* Flexbox para organizar logo y navegación */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    
+}
+
+/* Logo */
+header .logo {
+    font-size: 1.5rem; /* Tamaño del texto para el logo */
+    font-weight: bold;
+    color: #98E24E;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 2px solid #DFF2B6; /* Borde opcional */
+    border-radius: 0.5rem; /* Borde redondeado */
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Menú alineado a la derecha */
+    margin: 0;
+    padding: 0;
+}
+
+/*Elementos del menú (caja)*/
+nav ul li {
+    margin-left: 2rem; /* Espacio entre elementos del menú */
+}
+
+/* Elementos del menú(texto/enlace)*/
+nav ul li a {
+    color: #98E24E;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, transform 0.2s; /* Transicion entre el texto normal y para cuando se ponga el raton encima*/
+    border-radius: 0.3125rem; /* 5px */
+}
+
+/* Raton encima del elemento del menú*/
+nav ul li a:hover {
+    background-color: #DFF2B6;
+    color: #111810;
+    transform: scale(1.1);
+    border-radius: 0.3125rem; /* 5px */
+}
+
+/* Menú para la vista desktop*/
+.menu {
+    display: flex; /* Mantén el menú visible en pantallas grandes */
+    gap: 1rem; /* Espaciado entre los elementos */
+    list-style: none; /* Sin viñetas */
+}
+
+/* menú para la vista movil*/
+.hamburguesa {
+    display: none; /* Ocultar el ícono en pantallas grandes */
+}
+
+/* Seccion Hero */
+/* Contenedor de la seccion hero*/
+#hero {
+    height: 90vh; /* Ocupa al menos el 90% del viewport */
+    background-color: #EAF2CE;
+    display: flex;
+    flex-direction: row; /* Texto e imagen en línea */
+    justify-content: space-around; /* Misma distancia entre foto e imagen respecto al borde*/
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor para la imagen de perfil*/
+.imagenPersona {
+    height: 75%;
+    width: 33%;
+    z-index: 1;
+    position: relative;
+    flex-direction: row-reverse;
+    border-radius: 15%;
+}
+
+/* imagen dentro del contenedor que ocupa su 100%*/
+.imagenPersona img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+/* Contenedor en donde se va a almacenar el texto y el boton al GitHub*/
+.textoHero {
+    z-index: 2; /* Texto por encima de la imagen */
+    width: 40%; /* Ocupa un tercio del ancho de la sección */
+    color: #17181f;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Cada objeto debajo de otro*/
+    align-items: flex-start;
+    background-color: #88BF50;
+    padding: 3rem;
+    border-radius: 3rem;
+    height: auto; /* Asegura que ocupe toda la altura del contenedor */
+}
+
+/* Titulo del contenedor*/
+.textoHero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/*Texto del contendor*/
+.textoHero p {
+    margin: 1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/* Boton al github*/
+.btnGithub {
+    display: flex; 
+    justify-content:center;
+    align-items: flex-end; /* Alinea el texto del botón */
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #17181f;
+    background-color: #DFF2B6;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+/* Raton encima del boton del github*/
+.btnGithub:hover {
+    background-color: #111810;
+    color: #EAF2CE;
+    transform: scale(1.05);
+}
+
+
+/* Hexágonos */
+/* Seccion de Proyectos */
+#proyectos {
+    background-color: #88BF50;
+    color: #111810;
+}
+
+/* Contenedor en donde se almacenan todos los hexagonos*/
+.hexagonos-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Si el ancho no permite todos los hexagonos en linea se bajan a otra fila*/
+    gap: 2rem; /* Espacio entre hexagonos*/
+    padding: 3rem;
+}
+
+/* Titulo de la seccion*/
+.proyectos h2{
+    line-height: 2rem;
+}
+
+/* Contenedor que forma el hexagono*/
+.imagenHexagono {
+    width: 27rem; 
+    height: 22rem; 
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Creacion del hexagono*/
+    position: relative;
+    overflow: hidden; /*Que al iniciarse la pagina el reverso este oculto y solo se active con el raton*/
+    transition: transform 0.6s ease-in-out;/* tipo de transicion para cuando el raton este encima*/
+}
+
+/* Frente y reverso del hexagono */
+/* Que ocupe el 100% del contendedor y este centrado su contenido dentro del mismo*/
+.imagenHexagono .frente,
+.imagenHexagono .reverso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    backface-visibility: hidden;
+    transition: opacity 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+/* Frente: Imagen */
+.imagenHexagono .frente img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* Reverso: Contenido */
+.imagenHexagono .reverso {
+    background: #111810;
+    color: #EAF2CE;
+    opacity: 0; /* Inicialmente oculto */
+    clip-path: inherit;
+}
+
+/* Interacción del ratón */
+.imagenHexagono:hover .frente,
+.imagenHexagono.active .frente {
+    opacity: 0; /* Oculta el frente */
+}
+
+.imagenHexagono:hover .reverso,
+.imagenHexagono.active .reverso {
+    opacity: 1; /* Muestra el reverso */
+}
+
+/* Seccion Contacto y Fomulario*/
+/* Contendor por defecto de la seccion*/
+#contacto {
+    padding: 2rem;
+    background-color: #EAF2CE;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido globalmente */
+    color: #111810;
+}
+
+/* Contenedor principal en el que esta el cuadro de texto y el formulario */
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mantiene los elementos alineados desde el inicio */
+    gap: 3rem; /*espacio entre la caja de texto y el formulario */
+    width: 100%;
+    max-width: 75rem; /* Ancho máximo del contenedor */
+    padding: 0 2rem;
+    position: relative;
+}
+
+/* Área de texto */
+.texto-contacto {
+    background-color: #98E24E;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 3rem;
+    margin-left: 1.5rem;
+    max-width: 100%; /* Permite que el texto se ajuste según el contenido */
+    min-width: auto; /* Elimina restricciones de ancho mínimo */
+    text-align: left; /* Alinea el texto dentro de la caja */
+    white-space: normal; /* Permite que el texto se ajuste automáticamente */
+    flex-shrink: 0; /* Evita que la caja de texto se reduzca demasiado */
+}
+
+/*Color del texto*/
+.texto-contacto p{
+    color: #111810;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    min-width: 18.75rem; /* 300px convertido a rem */
+    margin-left: auto; /* Centra el formulario a partir del centro de la sección */
+    flex-grow: 1; /* Permite que el formulario crezca si es necesario */
+    margin-right: -5rem;
+}
+
+/*Campos del formulario*/
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #88BF50;
+}
+
+/*Cuando se pincha dentro de un campo del formulario*/
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #111810;
+
+}
+
+/* Botón de enviar */
+.btnEnviar {
+    background-color: #98E24E;
+    color: #111810;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Boton enviar con el raton encima*/
+.btnEnviar:hover {
+    background-color: #111810;
+    color: #EAF2CE;
+    transform: scale(1.05); /* Aumenta su tamaño*/
+}
+
+
+/* Footer*/
+/* Contenedor de Redes Sociales*/
+#redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente todo el contenido */
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 12%; 
+    text-align: center;
+    background-color: #111810;
+    padding: 1rem;
+}
+
+/* Texto del footer*/
+#redes p {
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    color: #98E24E;
+}
+
+/* contenedor de iconos de fontawesome*/
+.iconos {
+    display: flex; /* Para mostrar los iconos en fila */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 3rem; /* Espacio entre los iconos */
+
+}
+
+/* inconos del fontawesome*/
+.iconos a {
+    color: #98E24E; 
+    font-size: 2rem; /* Tamaño de los iconos */
+    transition: color 0.3s; /* Transición de color al pasar el raton */
+    transition: transform 0.2s;
+}
+
+/* iconos cuando el raton esta encima*/
+.iconos a:hover {
+    color: #DFF2B6;
+    transform: scale(1.05); /*aumenta su tamaño*/
+}
+
+/* dimensiones de los iconos*/
+.iconos i {
+    width: 1rem; /* Ancho de los iconos */
+    height: 1rem; /* Altura de los iconos */
+    text-align: center; /* Alineación de los iconos */
+}
+
+
+/* MQ para la vista movil*/
+@media (max-width: 768px) {
+    /*Menu hamburguesa en moviles (contenedor)*/
+    .menu {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column; /* Organiza los elementos en columna */
+        position: absolute;
+        top: 70px; /* Ajuste para que aparezca justo debajo del header */
+        right: 10px; /* Alineado hacia la derecha */
+        background-color: #111810; 
+        border-radius: 0.5rem;
+        padding: 0.5rem; 
+        width: auto; 
+        z-index: 100;
+        text-align: left;
+    }
+
+    /* Muestra el menú cuando está activo */
+    .menu.active {
+        display: flex; 
+    }
+
+    /* Espaciado vertical entre elementos del menú */
+    .menu li {
+        margin: 0.5rem 0; 
+    }
+
+    /* Elementos del menu hamburguesa*/
+    .menu li a {
+        color: #98E24E; /* Color del texto del menú */
+        text-align: left; /* Alineación a la izquierda */
+        padding: 0.5rem 1rem; /* Espaciado interno para cada enlace */
+        display: block; /* Cada enlace ocupa una línea completa */
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        width: auto; /* Ajusta el ancho al contenido */
+    }
+
+    /* Icono de 3 rayas*/
+    .hamburguesa {
+        display: block; /* Mostrar el ícono en pantallas pequeñas */
+        font-size: 2rem;
+        color: #98E24E;
+        cursor: pointer;
+    }
+
+
+    /*Hero para moviles*/
+    #hero {
+        flex-direction: row; /* Mantiene disposición horizontal */
+        height: auto;
+        padding: 1rem;
+    }
+
+    .imagenPersona{
+        width: 33%;
+    }
+
+    .textoHero {
+        width: 33%;/* Reduce el ancho en pantallas pequeñas */
+        height: 33%;
+        padding: 0.8rem;
+        margin-left: 3rem;
+        border-radius: 1rem;
+        
+    }
+
+    .textoHero h1 {
+        font-size: 1rem; /* Tamaño de texto más pequeño */
+    }
+
+    .textoHero p {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .btnGithub {
+        width: 100%; /* Ajusta al contenido */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem; /* Botón más pequeño */
+        font-size: 0.75rem;
+    }
+
+
+    /*Mis proyectos para moviles*/
+    .hexagonos-contenedor {
+        gap: 1.5rem;
+    }
+
+    /* Contenedor de la imagen*/
+    .imagenHexagono {
+        width: 200px; /* Ajuste en pantallas medianas */
+        height: 180px;
+    }
+
+    /* Texto del reverso de la imagen*/
+    .imagenHexagono .reverso p{
+        font-size: 0.75rem;
+    }
+
+
+
+
+    /* Contacto/Formulario para moviles */
+    .contacto-contenedor {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+        gap: 2rem; /* Espacio entre la caja de texto y el formulario */
+        padding: 1rem; /* Reduce el padding para pantallas pequeñas */
+        width: 100%; /* Asegura que el contenedor ocupa todo el ancho */
+    }
+
+    .texto-contacto {
+        margin-bottom: 1rem; /* Espacio entre el texto y el formulario */
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+    }
+
+    form {
+        max-width: 100%; /* Asegura que el formulario ocupa todo el ancho disponible */
+        text-align: center; /* Centra los elementos del formulario */
+        align-items: center; /* Centra los elementos del formulario horizontalmente */
+        margin: 0 auto; /* Centra el formulario globalmente */
+    }
+
+    input, textarea {
+        width: 90%; /* Ajusta los inputs y textareas para pantallas pequeñas */
+        margin: 0 auto; /* Centra horizontalmente cada campo */
+    }
+
+    .btnEnviar {
+        width: 90%; /* El botón también ocupa el ancho ajustado */
+        margin: 0 auto; /* Centra horizontalmente */
+    }
+}
