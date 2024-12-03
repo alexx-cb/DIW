@@ -1,0 +1,77 @@
+/* Reset para asegurar que ocupa toda la pantalla */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  /* Base para diseño mobile-first */
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "article"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto; /* Las filas se adaptan al contenido */
+    gap: 10px;
+    height: 100vh; /* Ocupa toda la pantalla en altura */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+  }
+  
+  header {
+    grid-area: header;
+    background-color: lavender;
+  }
+  
+  nav {
+    grid-area: nav;
+    background-color: lightblue;
+  }
+  
+  article {
+    grid-area: article; /* Usando article para la sección principal */
+    background-color: lightgreen;
+  }
+  
+  aside {
+    grid-area: aside;
+    background-color: lightgray;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: lightseagreen;
+  }
+  
+  /* Pantallas medianas (tablet, ≥768px) */
+  @media (min-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header header"
+        "nav article"
+        "aside article"
+        "footer footer";
+      grid-template-columns: 1fr 2fr; /* Dos columnas: nav y aside más pequeños, article más amplio */
+      grid-template-rows: auto 1fr auto; /* Fila central flexible */
+    }
+  }
+  
+  /* Pantallas grandes (desktop, ≥992px) */
+  @media (min-width: 992px) {
+    .container {
+      grid-template-areas:
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr; /* Tres columnas */
+      grid-template-rows: auto 1fr auto; /* Footer ocupa toda la última fila */
+    }
+  }
+  

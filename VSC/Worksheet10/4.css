@@ -1,0 +1,68 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr repeat(10, minmax(min-content, 13rem)) 1fr;
+    grid-template-rows: 10rem repeat(7, auto);
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Elementos del grid */
+.item {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.separador{
+    background-color: aqua;
+    border-radius: 4px;
+    grid-row-start:1 ;
+    grid-row-end: 9;
+}
+.nav{
+    background-color: chartreuse;
+    border-radius: 4px;
+    grid-column-start: 2;
+    grid-column-end:12 ;
+}
+.final{
+    background-color: darkblue;
+    border-radius: 4px;
+    grid-column-start:12 ;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+.contenido{
+    background-color: blanchedalmond;
+    grid-area: 2/2/8/12;
+    border-radius: 4px;
+}
+.footer{
+    background-color: dimgray;
+    grid-column:2/12;
+    border-radius: 4px;
+}
