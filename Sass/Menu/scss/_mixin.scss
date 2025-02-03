@@ -1,0 +1,15 @@
+@mixin genera_cabeceras($level, $color){
+    font-size: size($level);
+    color: $color;
+    font-family: $font-family;
+    background-color: #333;
+}
+
+@for $i from 1 through 6{
+    h#{$i}, .h#{$i}{
+        @include genera_cabeceras(
+            nth(('xxl', 'xl', 'l', 'm', 's', 'xs'), $i),
+            color(nth(('primary', 'secondary', 'tertiary', 'quaternary', 'quinta', 'black'), $i))
+        );
+    }
+}
